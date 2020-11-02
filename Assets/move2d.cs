@@ -8,28 +8,61 @@ public class Move2D : MonoBehaviour
 	public float speed;
 	private float moveInput;
 	public bool isGrounded = false;
-
-	
+	SpriteRenderer mySpriteRenderer;
+	public bool directionx = false;
 	
 	
     // Start is called before the first frame update
     void Start()
     {
-			rb = GetComponent<Rigidbody2D>();
+		mySpriteRenderer = GetComponent<SpriteRenderer>();
+		rb = GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
     void Update()
     {
 		Jump();
-        moveInput = Input.GetAxis("Horizontal");
-		rb.velocity = new Vector2(moveInput * speed, rb.velocity.y);
+		move();
+		direction();
+		if(isGrounded == true)
+		{
+			if (directionx == true)
+			{
+				mySpriteRenderer.flipX = true;
+			}
+			if (directionx == false)
+			{
+				mySpriteRenderer.flipX = false;
+			}
+		}
     }
 	void Jump()
 	{
 		if (Input.GetButtonDown("Jump") && isGrounded == true)
 		{
 			rb.AddForce(new Vector2(0f, 5f), ForceMode2D.Impulse);
+		}
+	}
+	void move()
+	{
+		if (isGrounded == true)
+		{
+			moveInput = Input.GetAxis("Horizontal");
+			rb.velocity = new Vector2(moveInput * speed, rb.velocity.y);
+		
+			
+		}
+	}
+	void direction()
+	{
+		if(Input.GetKeyDown(KeyCode.A))
+		{
+			directionx = false;
+		}
+		if (Input.GetKeyDown(KeyCode.D))
+		{
+			directionx = true;
 		}
 	}
 }
