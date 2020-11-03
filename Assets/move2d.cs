@@ -10,6 +10,8 @@ public class Move2D : MonoBehaviour
 	public bool isGrounded = false;
 	SpriteRenderer mySpriteRenderer;
 	public bool directionx = false;
+	public KeyCode moveLeft = KeyCode.A;
+	public KeyCode moveRight = KeyCode.D;
 	
 	
     // Start is called before the first frame update
@@ -60,7 +62,15 @@ public class Move2D : MonoBehaviour
 		{
 			directionx = false;
 		}
+		if(Input.GetKey(moveLeft))
+		{
+			directionx = false;
+		}
 		if (Input.GetKeyDown(KeyCode.D))
+		{
+			directionx = true;
+		}
+		if (Input.GetKey(moveRight))
 		{
 			directionx = true;
 		}
