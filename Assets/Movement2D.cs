@@ -6,6 +6,7 @@ public class Movement2D : MonoBehaviour
 {
 	private Rigidbody2D rb;
 	public float speed;
+	public float jumpH;
 	private float moveInput;
 	public bool isGrounded = false;
 	SpriteRenderer mySpriteRenderer;
@@ -43,7 +44,7 @@ public class Movement2D : MonoBehaviour
 	{
 		if (Input.GetButtonDown("Jump") && isGrounded == true)
 		{
-			rb.AddForce(new Vector2(0f, 5f), ForceMode2D.Impulse);
+			rb.AddForce(new Vector2(0f, jumpH), ForceMode2D.Impulse);
 		}
 	}
 	void move()
