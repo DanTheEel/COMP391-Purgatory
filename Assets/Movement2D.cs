@@ -53,25 +53,23 @@ public class Movement2D : MonoBehaviour
 		{
 			moveInput = Input.GetAxis("Horizontal");
 			rb.velocity = new Vector2(moveInput * speed, rb.velocity.y);
-		
-			
 		}
 	}
 	void direction()
 	{
-		if(Input.GetKeyDown(KeyCode.A))
+		if(Input.GetKey(KeyCode.A) && !Input.GetKey(moveRight) && !Input.GetKey(KeyCode.D) && !Input.GetKey(moveLeft)) // A key and make player face left
 		{
 			directionx = false;
 		}
-		if(Input.GetKey(moveLeft))
+		else if(Input.GetKey(moveLeft) && !Input.GetKey(KeyCode.D) && !Input.GetKey(KeyCode.A) && !Input.GetKey(moveRight)) // left arrow and make player face left
 		{
 			directionx = false;
 		}
-		if (Input.GetKeyDown(KeyCode.D))
+		else if (Input.GetKey(KeyCode.D) && !Input.GetKey(moveLeft) && !Input.GetKey(KeyCode.A) && !Input.GetKey(moveRight)) // D key and make player face right
 		{
 			directionx = true;
 		}
-		if (Input.GetKey(moveRight))
+		else if (Input.GetKey(moveRight) && !Input.GetKey(KeyCode.A) && !Input.GetKey(moveLeft) && !Input.GetKey(KeyCode.D)) // right arrow and make player face right
 		{
 			directionx = true;
 		}
