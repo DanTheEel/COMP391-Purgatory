@@ -87,7 +87,7 @@ InputManager:
     joyNum: 0
   - serializedVersion: 3
     m_Name: Jump
-    descriptiveName: 
+    descriptiveName: Jump
     descriptiveNegativeName: 
     negativeButton: 
     positiveButton: space
