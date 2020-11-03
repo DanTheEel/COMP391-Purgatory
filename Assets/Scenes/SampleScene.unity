@@ -998,7 +998,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
-  jumpH: 5
+  jumpH: 8
   isGrounded: 0
   directionx: 1
   moveLeft: 276
@@ -1351,7 +1351,7 @@ PrefabInstance:
     - target: {fileID: 4487667340370127642, guid: 3cdf9f65986da504f948bc717f1b3aa5,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -11.16
+      value: -13.5777
       objectReference: {fileID: 0}
     - target: {fileID: 4487667340370127642, guid: 3cdf9f65986da504f948bc717f1b3aa5,
         type: 3}
@@ -1402,6 +1402,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4487667340370127642, guid: 3cdf9f65986da504f948bc717f1b3aa5,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.2263025
       objectReference: {fileID: 0}
     - target: {fileID: 4487667340370127645, guid: 3cdf9f65986da504f948bc717f1b3aa5,
         type: 3}

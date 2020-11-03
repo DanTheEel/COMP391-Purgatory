@@ -44,6 +44,9 @@ public class Movement2D : MonoBehaviour
 	{
 		if (Input.GetButtonDown("Jump") && isGrounded == true)
 		{
+			var vel = rb.velocity;
+			vel.y = 0.0f;
+			rb.velocity = vel;
 			rb.AddForce(new Vector2(0f, jumpH), ForceMode2D.Impulse);
 		}
 	}
