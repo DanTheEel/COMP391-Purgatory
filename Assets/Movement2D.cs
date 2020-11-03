@@ -74,4 +74,5 @@ public class Movement2D : MonoBehaviour
 			directionx = true;
 		}
 	}
+	
 }
