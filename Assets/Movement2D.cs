@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Move2D : MonoBehaviour
+public class Movement2D : MonoBehaviour
 {
 	private Rigidbody2D rb;
 	public float speed;
@@ -10,8 +10,8 @@ public class Move2D : MonoBehaviour
 	public bool isGrounded = false;
 	SpriteRenderer mySpriteRenderer;
 	public bool directionx = false;
-	public KeyCode moveLeft = KeyCode.A;
-	public KeyCode moveRight = KeyCode.D;
+	public KeyCode moveLeft = KeyCode.LeftArrow;
+	public KeyCode moveRight = KeyCode.RightArrow;
 	
 	
     // Start is called before the first frame update

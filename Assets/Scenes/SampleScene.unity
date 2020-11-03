@@ -888,8 +888,8 @@ GameObject:
   - component: {fileID: 1457141275}
   - component: {fileID: 1457141279}
   - component: {fileID: 1457141278}
-  - component: {fileID: 1457141277}
   - component: {fileID: 1457141280}
+  - component: {fileID: 1457141277}
   m_Layer: 0
   m_Name: player
   m_TagString: Player
@@ -971,7 +971,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1457141274}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fac6c067be1b7ee44aa7ae343e13fbb4, type: 3}
+  m_Script: {fileID: 11500000, guid: 197b766a85ce9544cb23755f39baf414, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
