@@ -9,12 +9,16 @@ public class isHidden : MonoBehaviour
     {
         Hidden = false;
     }
-    private void OnTriggerStay2D(Collider2D other)
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log("stay2d");
         if (other.gameObject.CompareTag("Bush"))
         {           
            Hidden = true;
+        }
+        else if (other.gameObject.CompareTag("Vision") && Hidden == false)
+        {
+            Debug.Log("dead? maybe");
+            //die? idk how we are gonna punish the player for failing
         }
     }
     private void OnTriggerExit2D(Collider2D other)
@@ -22,6 +26,14 @@ public class isHidden : MonoBehaviour
         if (other.gameObject.CompareTag("Bush"))
         {          
             Hidden = false;
+        }
+    }
+    private void OnTriggerStay2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("Vision") && Hidden == false)
+        {
+            Debug.Log("dead? maybe");
+            //die? idk how we are gonna punish the player for failing
         }
     }
 }

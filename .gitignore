@@ -67,3 +67,7 @@ Packages/manifest.json
 Packages/packages-lock.json
 
 ProjectSettings/ProjectVersion.txt
+
+ProjectSettings/
+
+Packages/
