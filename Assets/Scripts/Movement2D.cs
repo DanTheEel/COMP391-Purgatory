@@ -12,9 +12,7 @@ public class Movement2D : MonoBehaviour
 	SpriteRenderer mySpriteRenderer;
 	public bool directionx = false;
 	public KeyCode moveLeft = KeyCode.LeftArrow;
-	public KeyCode moveRight = KeyCode.RightArrow;
-	
-	
+	public KeyCode moveRight = KeyCode.RightArrow;	
     // Start is called before the first frame update
     void Start()
     {
@@ -76,6 +74,5 @@ public class Movement2D : MonoBehaviour
 		{
 			directionx = true;
 		}
-	}
-	
+	}   
 }
