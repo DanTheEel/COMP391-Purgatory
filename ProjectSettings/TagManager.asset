@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Ground
   - groundcheck
+  - Bush
+  - Vision
   layers:
   - Default
   - TransparentFX
