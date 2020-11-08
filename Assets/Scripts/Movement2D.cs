@@ -37,6 +37,15 @@ public class Movement2D : MonoBehaviour
 				mySpriteRenderer.flipX = false;
 			}
 		}
+		Debug.Log(rb.velocity);
+		if (rb.velocity==new Vector2(0,0))
+		{
+			GetComponent<Animator>().enabled = false;
+		}
+        else
+        {
+			GetComponent<Animator>().enabled = true;
+		}		
     }
 	void Jump()
 	{

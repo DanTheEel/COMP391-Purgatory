@@ -1,10 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class isHidden : MonoBehaviour
 {
     public bool Hidden;
+    private GameObject Checkpoint;
     private void Start()
     {
         Hidden = false;
@@ -17,8 +19,7 @@ public class isHidden : MonoBehaviour
         }
         else if (other.gameObject.CompareTag("Vision") && Hidden == false)
         {
-            Debug.Log("dead? maybe");
-            //die? idk how we are gonna punish the player for failing
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
     }
     private void OnTriggerExit2D(Collider2D other)
@@ -32,8 +33,7 @@ public class isHidden : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Vision") && Hidden == false)
         {
-            Debug.Log("dead? maybe");
-            //die? idk how we are gonna punish the player for failing
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
     }
 }
