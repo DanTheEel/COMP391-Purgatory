@@ -7,6 +7,7 @@ public class mover : MonoBehaviour
 {
     public float speed;
     private Rigidbody2D rb;
+    private float x;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,6 +17,10 @@ public class mover : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       rb.velocity = new Vector2(speed, 0.0f);  
+       rb.velocity = new Vector2(speed, 0.0f);
+        if (this.transform.position.x<-20)
+        {
+            Destroy(this.gameObject);
+        }
     }
 }
