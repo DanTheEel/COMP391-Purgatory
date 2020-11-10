@@ -901,7 +901,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1bc187ea00279746aa9f92e0ee33f59, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myPos: {x: 0, y: 2, z: -10}
+  myPos: {x: 0, y: 2, z: -50}
   myPlay: {fileID: 1457141276}
 --- !u!1001 &621834433
 PrefabInstance:
