@@ -744,6 +744,7 @@ GameObject:
   m_Component:
   - component: {fileID: 476878042}
   - component: {fileID: 476878043}
+  - component: {fileID: 476878044}
   m_Layer: 0
   m_Name: LeftBox
   m_TagString: PlayerCollider
@@ -791,6 +792,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 5.0382953, y: 11.624875}
   m_EdgeRadius: 0
+--- !u!114 &476878044
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 476878041}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1926d515ba6ad71459485558f9f9636e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Hidden: 0
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -1013,6 +1027,7 @@ GameObject:
   m_Component:
   - component: {fileID: 856882816}
   - component: {fileID: 856882817}
+  - component: {fileID: 856882818}
   m_Layer: 0
   m_Name: RightBox
   m_TagString: Untagged
@@ -1060,6 +1075,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 5.0959654, y: 11.624879}
   m_EdgeRadius: 0
+--- !u!114 &856882818
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 856882815}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1926d515ba6ad71459485558f9f9636e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Hidden: 0
 --- !u!1001 &865302590
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1864,6 +1892,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1139359305}
   - component: {fileID: 1139359306}
+  - component: {fileID: 1139359307}
   m_Layer: 0
   m_Name: HeadBox
   m_TagString: PlayerCollider
@@ -1911,6 +1940,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 5.038285, y: 5.48389}
   m_EdgeRadius: 0
+--- !u!114 &1139359307
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1139359304}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1926d515ba6ad71459485558f9f9636e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Hidden: 0
 --- !u!4 &1457141276 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8234851943544102515, guid: 39633269f4d4ea24ea41f5dd07d1cb7c, type: 3}
@@ -2121,5 +2163,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: player
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7814593089412379642, guid: 39633269f4d4ea24ea41f5dd07d1cb7c, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 39633269f4d4ea24ea41f5dd07d1cb7c, type: 3}
