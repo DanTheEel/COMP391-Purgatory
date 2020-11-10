@@ -8,6 +8,7 @@ TagManager:
   - groundcheck
   - Bush
   - Vision
+  - PlayerCollider
   layers:
   - Default
   - TransparentFX
