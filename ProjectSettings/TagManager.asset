@@ -9,6 +9,7 @@ TagManager:
   - Bush
   - Vision
   - PlayerCollider
+  - Portal
   layers:
   - Default
   - TransparentFX
@@ -43,6 +44,15 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Background
+    uniqueID: 849911753
+    locked: 0
+  - name: SecondBG
+    uniqueID: 1360089161
+    locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Foreground
+    uniqueID: 3046577969
     locked: 0
