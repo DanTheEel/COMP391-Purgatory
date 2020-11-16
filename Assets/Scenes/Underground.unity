@@ -3414,6 +3414,10 @@ PrefabInstance:
       propertyPath: jumpH
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 8234851943544102514, guid: 39633269f4d4ea24ea41f5dd07d1cb7c, type: 3}
+      propertyPath: airSpeed
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 8234851943544102515, guid: 39633269f4d4ea24ea41f5dd07d1cb7c, type: 3}
       propertyPath: m_LocalPosition.x
       value: -10.34
