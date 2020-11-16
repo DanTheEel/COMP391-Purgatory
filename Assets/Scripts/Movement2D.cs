@@ -7,6 +7,7 @@ public class Movement2D : MonoBehaviour
 	private Rigidbody2D rb;
 	public float speed;
 	public float jumpH;
+	public float airSpeed;
 	private float moveInput;
 	public bool isGrounded = false;
 	SpriteRenderer mySpriteRenderer;
@@ -26,16 +27,13 @@ public class Movement2D : MonoBehaviour
 		Jump();
 		move();
 		direction();
-		if(isGrounded == true)
+		if (directionx == true)
 		{
-			if (directionx == true)
-			{
-				mySpriteRenderer.flipX = true;
-			}
-			if (directionx == false)
-			{
-				mySpriteRenderer.flipX = false;
-			}
+			mySpriteRenderer.flipX = true;
+		}
+		if (directionx == false)
+		{
+			mySpriteRenderer.flipX = false;
 		}
 		if (rb.velocity==new Vector2(0,0))
 		{
@@ -63,6 +61,12 @@ public class Movement2D : MonoBehaviour
 			moveInput = Input.GetAxis("Horizontal");
 			rb.velocity = new Vector2(moveInput * speed, rb.velocity.y);
 		}
+		else if (isGrounded == false)
+		{
+			moveInput = Input.GetAxis("Horizontal");
+			rb.velocity = new Vector2(moveInput * airSpeed, rb.velocity.y);
+		}
+		
 	}
 	void direction()
 	{
