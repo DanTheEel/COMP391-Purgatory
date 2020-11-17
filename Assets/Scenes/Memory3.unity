@@ -187,6 +187,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1332751740901615992, guid: 8bfacc5e2381c0146a969e7c6c38e8b8, type: 3}
+      propertyPath: myPlay
+      value: 
+      objectReference: {fileID: 1911302827}
     - target: {fileID: 1332751740901615993, guid: 8bfacc5e2381c0146a969e7c6c38e8b8, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -319,3 +323,8 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &1911302827 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8234851943544102515, guid: 39633269f4d4ea24ea41f5dd07d1cb7c, type: 3}
+  m_PrefabInstance: {fileID: 805535439}
+  m_PrefabAsset: {fileID: 0}
