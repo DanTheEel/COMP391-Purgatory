@@ -5,10 +5,12 @@ using UnityEngine;
 public class boxfall : MonoBehaviour
 {
 	private Rigidbody2D rb;
+	public GameObject Box;
     // Start is called before the first frame update
     void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
+		Box = gameObject.transform.parent.gameObject;
+        rb = Box.GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
@@ -20,7 +22,6 @@ public class boxfall : MonoBehaviour
 	{
 		if (collision.collider.tag == "groundcheck")
 		{
-			Debug.Log("Player");
 			rb.bodyType = RigidbodyType2D.Dynamic;
 		}
 	}

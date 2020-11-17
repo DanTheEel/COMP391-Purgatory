@@ -20,7 +20,7 @@ public class Spawner : MonoBehaviour
         timer += Time.deltaTime;
         if (timer>randomTimer)
         {
-			randomTimer = Random.Range(8.0f, 15.0f);
+			randomTimer = Random.Range(8.0f, 30.0f);
             timer = 0;
             Instantiate(spawn, new Vector3(x, y, 0), Quaternion.identity);
 			Debug.Log(randomTimer);

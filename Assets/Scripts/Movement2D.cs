@@ -9,6 +9,7 @@ public class Movement2D : MonoBehaviour
 	public float jumpH;
 	public float airSpeed;
 	private float moveInput;
+	public bool airDirection = false;
 	public bool airChange = false;
 	public bool isGrounded = false;
 	SpriteRenderer mySpriteRenderer;
@@ -25,25 +26,11 @@ public class Movement2D : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-		Jump(); // calls jump method every frame
-		move(); // calls move method every frame
-		direction(); // calls direction every frame
-		if (directionx == true) //if direction is true then the character is facing to the right
-		{
-			mySpriteRenderer.flipX = true;
-		}
-		if (directionx == false) //if direction is false then the character is facing the left
-		{
-			mySpriteRenderer.flipX = false;
-		}
-		if (rb.velocity==new Vector2(0,0))	//if character isn't moving then animator doesn't play and character stops moving
-		{
-			GetComponent<Animator>().enabled = false;
-		}
-        else // otherwise play animator
-        {
-			GetComponent<Animator>().enabled = true;
-		}
+		Jump(); // jumping
+		move(); // movement
+		direction(); // which way the character is facing
+		stopMotion(); // stopping the animator 
+		directionAnimator(); // which direction the animator is facing
 	}
 	void Jump() // jump method decides how high the player jumps 
 	{
@@ -53,7 +40,7 @@ public class Movement2D : MonoBehaviour
 			vel.y = 0.0f;
 			rb.velocity = vel;
 			rb.AddForce(new Vector2(0f, jumpH), ForceMode2D.Impulse);
-			airChange = directionx;
+			airDirection = directionx;
 		}
 	}
 	void move() // move method decides how the player moves
@@ -63,14 +50,19 @@ public class Movement2D : MonoBehaviour
 			moveInput = Input.GetAxis("Horizontal");
 			rb.velocity = new Vector2(moveInput * speed, rb.velocity.y);
 		}
-		else if (isGrounded == true && airChange == directionx) // moving while on the ground
+		else if (isGrounded == true && airDirection == directionx) // moving while on the ground
 		{
 			moveInput = Input.GetAxis("Horizontal");
 			rb.velocity = new Vector2(moveInput * speed, rb.velocity.y);
 		}
-		else if (isGrounded == false && airChange != directionx) // moving while in the air *must fix it currently isn't working properly*
-		{ // to fix in air movement we can allow the character to move normally unless a change in direction is seen
-			
+		else if (isGrounded == false && airDirection != directionx) // moving while in the air
+		{			
+			moveInput = Input.GetAxis("Horizontal"); //moveinput gets a value of 1 or -1
+			rb.velocity = new Vector2(moveInput * airSpeed, rb.velocity.y); // moveinput is 1 or -1 times airspeed which is less than regular movespeed this determines how fast you move while in the air
+			airChange = true;
+		}
+		else if (isGrounded == false && airDirection == directionx && airChange == true) // this is to allow the player slight movement in air after changing directions twice
+		{	
 			moveInput = Input.GetAxis("Horizontal"); //moveinput gets a value of 1 or -1
 			rb.velocity = new Vector2(moveInput * airSpeed, rb.velocity.y); // moveinput is 1 or -1 times airspeed which is less than regular movespeed this determines how fast you move while in the air
 		}
@@ -92,6 +84,28 @@ public class Movement2D : MonoBehaviour
 		else if (Input.GetKey(moveRight) && !Input.GetKey(KeyCode.A) && !Input.GetKey(moveLeft) && !Input.GetKey(KeyCode.D)) // right arrow and make player face right
 		{
 			directionx = true;
+		}
+	}
+	void stopMotion()
+	{
+		if (rb.velocity==new Vector2(0,0))	//if character isn't moving then animator doesn't play and character stops moving
+		{
+			GetComponent<Animator>().enabled = false;
+		}
+        else // otherwise play animator
+        {
+			GetComponent<Animator>().enabled = true;
+		}
+	}
+	void directionAnimator()
+	{
+		if (directionx == true) //if direction is true then the character is facing to the right
+		{
+			mySpriteRenderer.flipX = true;
+		}
+		else if (directionx == false) //if direction is false then the character is facing the left
+		{
+			mySpriteRenderer.flipX = false;
 		}
 	}
 }
