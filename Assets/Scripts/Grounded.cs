@@ -39,4 +39,13 @@ public class Grounded : MonoBehaviour
 			Player.GetComponent<Movement2D>().isGrounded = false;
 		}
 	}
+	private void OnCollisionStay2D(Collision2D collision)
+    {
+        if (collision.collider.tag == "Ground")
+        {
+            Player.GetComponent<Movement2D>().isGrounded = true;
+			Player.GetComponent<Movement2D>().airDirection = false;
+			Player.GetComponent<Movement2D>().airChange = false;
+        }
+    }
 }
