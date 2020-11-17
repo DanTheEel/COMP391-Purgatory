@@ -43,8 +43,7 @@ public class Movement2D : MonoBehaviour
         else // otherwise play animator
         {
 			GetComponent<Animator>().enabled = true;
-		}		
-		Debug.Log(airChange);
+		}
 	}
 	void Jump() // jump method decides how high the player jumps 
 	{
@@ -54,6 +53,7 @@ public class Movement2D : MonoBehaviour
 			vel.y = 0.0f;
 			rb.velocity = vel;
 			rb.AddForce(new Vector2(0f, jumpH), ForceMode2D.Impulse);
+			airChange = directionx;
 		}
 	}
 	void move() // move method decides how the player moves
