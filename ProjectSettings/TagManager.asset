@@ -10,6 +10,7 @@ TagManager:
   - Vision
   - PlayerCollider
   - Portal
+  - widescreen
   layers:
   - Default
   - TransparentFX

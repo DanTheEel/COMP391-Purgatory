@@ -9,7 +9,7 @@ public class Movement2D : MonoBehaviour
 	public float jumpH;
 	public float airSpeed;
 	private float moveInput;
-	public bool airDirection = false;
+	public bool airDirection;
 	public bool airChange = false;
 	public bool isGrounded = false;
 	SpriteRenderer mySpriteRenderer;
@@ -36,11 +36,11 @@ public class Movement2D : MonoBehaviour
 	{
 		if (Input.GetButtonDown("Jump") && isGrounded == true) // if player is on the ground and presses jump he jumps
 		{
+			airDirection = directionx;
 			var vel = rb.velocity;
 			vel.y = 0.0f;
 			rb.velocity = vel;
 			rb.AddForce(new Vector2(0f, jumpH), ForceMode2D.Impulse);
-			airDirection = directionx;
 		}
 	}
 	void move() // move method decides how the player moves
@@ -55,10 +55,10 @@ public class Movement2D : MonoBehaviour
 			moveInput = Input.GetAxis("Horizontal");
 			rb.velocity = new Vector2(moveInput * speed, rb.velocity.y);
 		}
-		else if (isGrounded == false && airDirection != directionx) // moving while in the air
-		{			
+		else if (isGrounded == false && airDirection != directionx) // detecting first air change
+		{	
 			moveInput = Input.GetAxis("Horizontal"); //moveinput gets a value of 1 or -1
-			rb.velocity = new Vector2(moveInput * airSpeed, rb.velocity.y); // moveinput is 1 or -1 times airspeed which is less than regular movespeed this determines how fast you move while in the air
+			rb.velocity = new Vector2(moveInput * airSpeed, rb.velocity.y); // moveinput is 1 or -1 times movespeed this determines how fast you move while in the air at first jump
 			airChange = true;
 		}
 		else if (isGrounded == false && airDirection == directionx && airChange == true) // this is to allow the player slight movement in air after changing directions twice
