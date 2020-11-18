@@ -391,11 +391,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8bfacc5e2381c0146a969e7c6c38e8b8, type: 3}
---- !u!1 &1695341308 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8234851943544102517, guid: 39633269f4d4ea24ea41f5dd07d1cb7c, type: 3}
-  m_PrefabInstance: {fileID: 1995405648}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1865015845
 GameObject:
   m_ObjectHideFlags: 0
@@ -582,7 +577,7 @@ PrefabInstance:
     - target: {fileID: 8234851942873808479, guid: 39633269f4d4ea24ea41f5dd07d1cb7c, type: 3}
       propertyPath: Player
       value: 
-      objectReference: {fileID: 1695341308}
+      objectReference: {fileID: 0}
     - target: {fileID: 8234851943544102514, guid: 39633269f4d4ea24ea41f5dd07d1cb7c, type: 3}
       propertyPath: airSpeed
       value: 1.8
@@ -635,7 +630,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: player
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7814593089412379642, guid: 39633269f4d4ea24ea41f5dd07d1cb7c, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 39633269f4d4ea24ea41f5dd07d1cb7c, type: 3}
 --- !u!1 &2101548551
 GameObject:

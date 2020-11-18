@@ -1,9 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CameraChanger : MonoBehaviour
 {
+	public GameObject CameraResize;
     // Start is called before the first frame update
     void Start()
     {
@@ -15,15 +17,9 @@ public class CameraChanger : MonoBehaviour
     {
         
     }
-	/*private void OnTriggerEnter2D(Collider2D other)
+	private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.CompareTag("widescreen"))
-        {           
-            
-        }
-        else if (other.gameObject.CompareTag("Vision") && Hidden == false)
-        {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-        }
-    }*/
+		UnityEngine.Debug.Log("ohey peter");
+        CameraResize.GetComponent<Camera>().orthographicSize = 15;
+    }
 }

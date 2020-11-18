@@ -35,6 +35,7 @@ public class Grounded : MonoBehaviour
 		if (collision.collider.tag == "Ground")
 		{
 			Player.GetComponent<Movement2D>().isGrounded = false;
+			Player.GetComponent<Movement2D>().airDirection = Player.GetComponent<Movement2D>().directionx;
 		}
 	}
 	private void OnCollisionStay2D(Collision2D collision)
