@@ -34,7 +34,9 @@ public class CameraChanger : MonoBehaviour
 				var vel = rb.velocity;
 				vel.x = 0.0f;
 				rb.velocity = vel;
-				CameraResize.GetComponent<Camera>().orthographicSize = 15f;
+				float camsize = CameraResize.GetComponent<Camera>().orthographicSize;
+				camsize = camsize * 1.0003f;
+				CameraResize.GetComponent<Camera>().orthographicSize = camsize;
 			}
 		}
     }
