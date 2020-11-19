@@ -15,7 +15,8 @@ public class Movement2D : MonoBehaviour
 	SpriteRenderer mySpriteRenderer;
 	public bool directionx = false;
 	public KeyCode moveLeft = KeyCode.LeftArrow;
-	public KeyCode moveRight = KeyCode.RightArrow;	
+	public KeyCode moveRight = KeyCode.RightArrow;
+	public bool movementEnabled = true;
     // Start is called before the first frame update
     void Start()
     {
@@ -26,11 +27,14 @@ public class Movement2D : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-		Jump(); // jumping
-		move(); // movement
-		direction(); // which way the character is facing
+		if (movementEnabled == true)
+		{
+			Jump(); // jumping
+			move(); // movement
+			direction(); // which way the character is facing
+			directionAnimator(); // which direction the animator is facing
+		}
 		stopMotion(); // stopping the animator 
-		directionAnimator(); // which direction the animator is facing
 	}
 	void Jump() // jump method decides how high the player jumps 
 	{

@@ -123,6 +123,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &410188510 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1332751740901616005, guid: 8bfacc5e2381c0146a969e7c6c38e8b8, type: 3}
+  m_PrefabInstance: {fileID: 923985430}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &708427362
 GameObject:
   m_ObjectHideFlags: 0
@@ -132,8 +137,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 708427365}
-  - component: {fileID: 708427364}
   - component: {fileID: 708427363}
+  - component: {fileID: 708427364}
   m_Layer: 0
   m_Name: cameraChange
   m_TagString: widescreen
@@ -148,24 +153,39 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 708427362}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 756196a86bca8ec49bf861f323e42c45, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!65 &708427364
-BoxCollider:
+  CameraResize: {fileID: 410188510}
+  Player: {fileID: 954365546}
+--- !u!61 &708427364
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 708427362}
+  m_Enabled: 1
+  m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.2808535, y: 0.28524733}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 4.1982436, y: 7.2251606, z: 1}
-  m_Center: {x: -1.5991218, y: 0.9423388, z: 0}
+  m_Size: {x: 6.417482, y: 7.062953}
+  m_EdgeRadius: 0
 --- !u!4 &708427365
 Transform:
   m_ObjectHideFlags: 0
@@ -174,7 +194,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 708427362}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.6650987, y: -3.6528318, z: -6.557536}
+  m_LocalPosition: {x: -6.6650987, y: -3.6528318, z: 10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -187,6 +207,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 8234851942873808448, guid: 39633269f4d4ea24ea41f5dd07d1cb7c, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8234851942873808479, guid: 39633269f4d4ea24ea41f5dd07d1cb7c, type: 3}
       propertyPath: Player
       value: 

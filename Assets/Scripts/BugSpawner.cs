@@ -22,8 +22,5 @@ public class BugSpawner : MonoBehaviour
             Instantiate(bug, bugspawner.transform.position, bugspawner.transform.rotation);
             timer = 0.0f;
         }
-        
-        
-        
     }
 }
