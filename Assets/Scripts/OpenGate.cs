@@ -5,6 +5,7 @@ using UnityEngine;
 public class OpenGate : MonoBehaviour
 {
     public GameObject Gate1;
+
     // Start is called before the first frame update
     void Start()
     {
