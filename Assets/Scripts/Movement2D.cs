@@ -17,6 +17,10 @@ public class Movement2D : MonoBehaviour
 	public KeyCode moveLeft = KeyCode.LeftArrow;
 	public KeyCode moveRight = KeyCode.RightArrow;
 	public bool movementEnabled = true;
+    private object other;
+	public GameObject Gate;
+	public GameObject Button;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -114,4 +118,6 @@ public class Movement2D : MonoBehaviour
 			mySpriteRenderer.flipX = false;
 		}
 	}
+
+    
 }
