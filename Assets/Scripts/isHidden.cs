@@ -20,6 +20,8 @@ public class isHidden : MonoBehaviour
         else if (other.gameObject.CompareTag("Vision") && Hidden == false)
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            Debug.Log("vision");
+            //die? idk how we are gonna punish the player for failing
         }
     }
     private void OnTriggerExit2D(Collider2D other)
