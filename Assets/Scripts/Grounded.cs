@@ -8,12 +8,14 @@ using UnityEngine;
 public class Grounded : MonoBehaviour
 {
 	public GameObject Player;
+	public Transform myPlay;
+	public float lastGrounded;
     // Start is called before the first frame update
     void Start()
     {
 		
         Player = gameObject.transform.parent.gameObject;
-		
+		lastGrounded = myPlay.position.y;
 	}
 
     // Update is called once per frame
@@ -27,6 +29,7 @@ public class Grounded : MonoBehaviour
 		
 		if (collision.collider.tag == "Ground")
 		{
+			//lastGrounded = myPlay.position.y; //this is an attempt to reset the last grounded when the player lands
 			Player.GetComponent<Movement2D>().airDirection = false;
 		}
 	}
@@ -34,6 +37,7 @@ public class Grounded : MonoBehaviour
 	{
 		if (collision.collider.tag == "Ground")
 		{
+			//lastGrounded = myPlay.position.y;
 			Player.GetComponent<Movement2D>().isGrounded = false;
 			Player.GetComponent<Movement2D>().airDirection = Player.GetComponent<Movement2D>().directionx;
 		}
@@ -42,6 +46,7 @@ public class Grounded : MonoBehaviour
     {
         if (collision.collider.tag == "Ground")
         {
+			lastGrounded = myPlay.position.y;
             Player.GetComponent<Movement2D>().isGrounded = true;
 			Player.GetComponent<Movement2D>().airChange = false;
         }
