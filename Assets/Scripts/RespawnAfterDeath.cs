@@ -20,6 +20,7 @@ public class RespawnAfterDeath : MonoBehaviour
 
         if (other.gameObject.tag == "Player")
         {
+            DeadCount.deadCount++;
             GameObject respawnPoint = GameObject.FindGameObjectWithTag("Respawn");
             GameObject player = GameObject.FindGameObjectWithTag("Player");
 
