@@ -909,8 +909,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1bc187ea00279746aa9f92e0ee33f59, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Player: {fileID: 7814593088503907804}
+  grounded: {fileID: 1060745821}
   myPos: {x: 0, y: 2, z: -50}
   myPlay: {fileID: 1457141276}
+  lastGroundedPos: 0
 --- !u!1001 &693312716
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1361,6 +1364,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1060745821 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8234851942873808450, guid: 39633269f4d4ea24ea41f5dd07d1cb7c, type: 3}
+  m_PrefabInstance: {fileID: 7814593088503907803}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1103944018
 GameObject:
   m_ObjectHideFlags: 0
@@ -2531,3 +2539,8 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 7814593089412379642, guid: 39633269f4d4ea24ea41f5dd07d1cb7c, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 39633269f4d4ea24ea41f5dd07d1cb7c, type: 3}
+--- !u!1 &7814593088503907804 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8234851943544102517, guid: 39633269f4d4ea24ea41f5dd07d1cb7c, type: 3}
+  m_PrefabInstance: {fileID: 7814593088503907803}
+  m_PrefabAsset: {fileID: 0}

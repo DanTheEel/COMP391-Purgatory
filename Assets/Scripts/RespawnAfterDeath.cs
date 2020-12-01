@@ -17,6 +17,7 @@ public class RespawnAfterDeath : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
+
         if (other.gameObject.tag == "Player")
         {
             GameObject respawnPoint = GameObject.FindGameObjectWithTag("Respawn");
@@ -29,5 +30,7 @@ public class RespawnAfterDeath : MonoBehaviour
             player.transform.position = new Vector2(newX, newY);
             
         }
+
+        
     }
 }

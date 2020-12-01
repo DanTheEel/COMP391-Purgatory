@@ -11,6 +11,9 @@ TagManager:
   - PlayerCollider
   - Portal
   - widescreen
+  - Bug
+  - Parchment
+  - Story1
   layers:
   - Default
   - TransparentFX
