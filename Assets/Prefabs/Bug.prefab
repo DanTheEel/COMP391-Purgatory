@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2327145105047236535}
   - component: {fileID: 2327145105047236532}
   - component: {fileID: 2635839869663239744}
-  - component: {fileID: 8018913191203874663}
+  - component: {fileID: 8639306425416432596}
   m_Layer: 0
   m_Name: Bug
   m_TagString: Bug
@@ -445,7 +445,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: -1.5
---- !u!114 &8018913191203874663
+--- !u!114 &8639306425416432596
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -454,6 +454,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 2327145105047236538}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f9449fc1ef511704d94eebcf4faee0ce, type: 3}
+  m_Script: {fileID: 11500000, guid: 6f1a3bfa8cf62c241b987a4333d69e93, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

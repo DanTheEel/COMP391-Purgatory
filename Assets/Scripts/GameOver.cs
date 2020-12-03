@@ -3,21 +3,25 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class DeadCount : MonoBehaviour
+public class GameOver : MonoBehaviour
 {
-    public static int deadCount = 0;
-    Text death;
+    public Image customImage;
     // Start is called before the first frame update
     void Start()
     {
-        death = GetComponent<Text>();
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        
-            death.text = "Death Count: " + deadCount;
-        
+        if (DeadCount.deadCount == 3)
+        {
+            customImage.enabled = true;
+        }
+        else
+        {
+            customImage.enabled = false;
+        }
     }
 }

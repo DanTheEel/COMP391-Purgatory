@@ -15,6 +15,7 @@ TagManager:
   - Parchment
   - Story1
   - Gate
+  - Respawn2
   layers:
   - Default
   - TransparentFX
