@@ -23,7 +23,6 @@ public class Spawner : MonoBehaviour
 			randomTimer = Random.Range(8.0f, 30.0f);
             timer = 0;
             Instantiate(spawn, new Vector3(x, y, 0), Quaternion.identity);
-			Debug.Log(randomTimer);
         }
     }
 }

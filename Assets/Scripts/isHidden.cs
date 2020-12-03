@@ -10,6 +10,7 @@ public class isHidden : MonoBehaviour
     private void Start()
     {
         Hidden = false;
+        Checkpoint = GameObject.Find("CheckpointStealthy");
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -19,9 +20,8 @@ public class isHidden : MonoBehaviour
         }
         else if (other.gameObject.CompareTag("Vision") && Hidden == false)
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-            Debug.Log("vision");
-            //die? idk how we are gonna punish the player for failing
+            RespawnAfterDeath.respawn(this.gameObject, Checkpoint);
+            Hidden = true;
         }
     }
     private void OnTriggerExit2D(Collider2D other)
@@ -35,7 +35,8 @@ public class isHidden : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Vision") && Hidden == false)
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            RespawnAfterDeath.respawn(this.gameObject, Checkpoint);
+            Hidden = true;
         }
     }
 }

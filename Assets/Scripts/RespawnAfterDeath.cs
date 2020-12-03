@@ -3,35 +3,21 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class RespawnAfterDeath : MonoBehaviour
-{
-    // Start is called before the first frame update
-    void Start()
+{    static public void respawn(GameObject player, GameObject respawnPoint)//respawns player to position respawnPoint (inside a method to be called by other scripts)
     {
-        
-    }
+        DeadCount.deadCount++;        
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        float newX, newY;
+        newX = respawnPoint.transform.position.x;
+        newY = respawnPoint.transform.position.y;
+
+        player.transform.position = new Vector2(newX, newY);
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
-
         if (other.gameObject.tag == "Player")
         {
-            DeadCount.deadCount++;
-            GameObject respawnPoint = GameObject.FindGameObjectWithTag("Respawn");
-            GameObject player = GameObject.FindGameObjectWithTag("Player");
-
-            float newX, newY;
-            newX = respawnPoint.transform.position.x;
-            newY = respawnPoint.transform.position.y;
-
-            player.transform.position = new Vector2(newX, newY);
-            
+            respawn(GameObject.FindGameObjectWithTag("Player"), GameObject.FindGameObjectWithTag("Respawn"));
         }
-
-        
     }
 }
