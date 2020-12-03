@@ -14,6 +14,7 @@ TagManager:
   - Bug
   - Parchment
   - Story1
+  - Gate
   layers:
   - Default
   - TransparentFX

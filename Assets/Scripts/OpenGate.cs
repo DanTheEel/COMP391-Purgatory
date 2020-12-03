@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class OpenGate : MonoBehaviour
 {
-    public GameObject Gate1;
+    //public GameObject Gate1;
 
     // Start is called before the first frame update
     void Start()
@@ -18,11 +18,12 @@ public class OpenGate : MonoBehaviour
         
     }
 
-    void OnTriggerEnter2D(Collider2D collision)
+    void OnTriggerEnter2D(Collider2D other)
     {
-        if (this.gameObject)
+        GameObject gate = GameObject.FindGameObjectWithTag("Gate");
+        if (other.gameObject.tag == "Player")
         {
-            Destroy(Gate1);
+            Destroy(gate);
         }
     }
 
