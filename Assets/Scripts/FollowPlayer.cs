@@ -18,7 +18,7 @@ public class FollowPlayer : MonoBehaviour
 	public bool hasJumped;
 	public float camOnExit;
 	public float camOnEnter;
-	private float newX, newY ,newZ; //this will be our x position that we will be manipulating to stay at the same X as the player while not being at the same y
+	public float newX, newY ,newZ; //this will be our x position that we will be manipulating to stay at the same X as the player while not being at the same y
 	//private int tracker = 0;
     // Update is called once per frame
     public void Update()
@@ -32,7 +32,7 @@ public class FollowPlayer : MonoBehaviour
 			{
 				transform.position = myPlay.position + myPos; // this takes the player position and adds -50 to the z and adds 0 to the y and x
 			}
-			if (camOnExit - camOnEnter < -7.5)
+			else if (camOnExit - camOnEnter < -7.5)
 			{
 				transform.position = myPlay.position + myPos;
 				/*Player.GetComponent<Movement2D>().movementEnabled = false;
