@@ -71,6 +71,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Player: {fileID: 0}
+  myPlay: {fileID: 0}
+  lastGrounded: 0
 --- !u!1 &8234851943544102517
 GameObject:
   m_ObjectHideFlags: 0
@@ -85,7 +87,7 @@ GameObject:
   - component: {fileID: 8234851943544102513}
   - component: {fileID: 8234851943544102479}
   - component: {fileID: 8234851943544102514}
-  - component: {fileID: 7814593089412379642}
+  - component: {fileID: 3682697082660484113}
   m_Layer: 0
   m_Name: player
   m_TagString: Player
@@ -239,11 +241,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   jumpH: 8
+  airSpeed: 0
+  airDirection: 0
+  airChange: 0
   isGrounded: 0
   directionx: 1
   moveLeft: 276
   moveRight: 275
---- !u!114 &7814593089412379642
+  movementEnabled: 1
+  Gate: {fileID: 0}
+  Button: {fileID: 0}
+--- !u!114 &3682697082660484113
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
