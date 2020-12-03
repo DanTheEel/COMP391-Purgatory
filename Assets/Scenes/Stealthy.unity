@@ -123,6 +123,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &71143360 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8234851943544102517, guid: 39633269f4d4ea24ea41f5dd07d1cb7c, type: 3}
+  m_PrefabInstance: {fileID: 7814593088503907803}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &258388013
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1892,6 +1897,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1978804608 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8234851942873808450, guid: 39633269f4d4ea24ea41f5dd07d1cb7c, type: 3}
+  m_PrefabInstance: {fileID: 7814593088503907803}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2078136789
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2015,6 +2025,18 @@ PrefabInstance:
     - target: {fileID: 1332751740901615992, guid: 8bfacc5e2381c0146a969e7c6c38e8b8, type: 3}
       propertyPath: myPos.z
       value: -10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1332751740901615992, guid: 8bfacc5e2381c0146a969e7c6c38e8b8, type: 3}
+      propertyPath: Player
+      value: 
+      objectReference: {fileID: 71143360}
+    - target: {fileID: 1332751740901615992, guid: 8bfacc5e2381c0146a969e7c6c38e8b8, type: 3}
+      propertyPath: grounded
+      value: 
+      objectReference: {fileID: 1978804608}
+    - target: {fileID: 1332751740901615992, guid: 8bfacc5e2381c0146a969e7c6c38e8b8, type: 3}
+      propertyPath: myPos.y
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1332751740901615993, guid: 8bfacc5e2381c0146a969e7c6c38e8b8, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2142,9 +2164,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 8234851942873808479, guid: 39633269f4d4ea24ea41f5dd07d1cb7c, type: 3}
+      propertyPath: myPlay
+      value: 
+      objectReference: {fileID: 1457141276}
+    - target: {fileID: 8234851942873808479, guid: 39633269f4d4ea24ea41f5dd07d1cb7c, type: 3}
+      propertyPath: Player
+      value: 
+      objectReference: {fileID: 71143360}
     - target: {fileID: 8234851943544102514, guid: 39633269f4d4ea24ea41f5dd07d1cb7c, type: 3}
       propertyPath: jumpH
-      value: 5
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8234851943544102514, guid: 39633269f4d4ea24ea41f5dd07d1cb7c, type: 3}
       propertyPath: airSpeed

@@ -133,7 +133,7 @@ GameObject:
   m_Component:
   - component: {fileID: 13593095}
   m_Layer: 0
-  m_Name: Wholes
+  m_Name: Holes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1897,6 +1897,11 @@ PrefabInstance:
     - target: {fileID: 7215863900162555585, guid: 8bfacc5e2381c0146a969e7c6c38e8b8, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8bfacc5e2381c0146a969e7c6c38e8b8, type: 3}
+--- !u!4 &205637616 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1332751740901615993, guid: 8bfacc5e2381c0146a969e7c6c38e8b8, type: 3}
+  m_PrefabInstance: {fileID: 205637615}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &212438427
 GameObject:
   m_ObjectHideFlags: 0
@@ -6352,6 +6357,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &952562965 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1332751740901616005, guid: 8bfacc5e2381c0146a969e7c6c38e8b8, type: 3}
+  m_PrefabInstance: {fileID: 205637615}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &959909705 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8234851942873808450, guid: 39633269f4d4ea24ea41f5dd07d1cb7c, type: 3}
@@ -32157,10 +32167,22 @@ PrefabInstance:
       propertyPath: myPlay
       value: 
       objectReference: {fileID: 1348661536}
+    - target: {fileID: 8234851942873808479, guid: 39633269f4d4ea24ea41f5dd07d1cb7c, type: 3}
+      propertyPath: Camera
+      value: 
+      objectReference: {fileID: 952562965}
+    - target: {fileID: 8234851942873808479, guid: 39633269f4d4ea24ea41f5dd07d1cb7c, type: 3}
+      propertyPath: myCam
+      value: 
+      objectReference: {fileID: 205637616}
     - target: {fileID: 8234851943544102514, guid: 39633269f4d4ea24ea41f5dd07d1cb7c, type: 3}
       propertyPath: airSpeed
       value: 1.8
       objectReference: {fileID: 0}
+    - target: {fileID: 8234851943544102514, guid: 39633269f4d4ea24ea41f5dd07d1cb7c, type: 3}
+      propertyPath: Camera
+      value: 
+      objectReference: {fileID: 952562965}
     - target: {fileID: 8234851943544102515, guid: 39633269f4d4ea24ea41f5dd07d1cb7c, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.85

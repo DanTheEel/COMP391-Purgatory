@@ -909,11 +909,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1bc187ea00279746aa9f92e0ee33f59, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player: {fileID: 7814593088503907804}
+  Player: {fileID: 1184272588}
   grounded: {fileID: 1060745821}
   myPos: {x: 0, y: 2, z: -50}
   myPlay: {fileID: 1457141276}
   lastGroundedPos: 0
+  lastGroundedPosPlaceholder: 0
+  hasJumped: 0
+  currentCamPos: 0
+  newX: 0
+  newY: 0
+  newZ: 0
 --- !u!1001 &693312716
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1522,6 +1528,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Hidden: 0
+--- !u!1 &1184272588 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8234851943544102517, guid: 39633269f4d4ea24ea41f5dd07d1cb7c, type: 3}
+  m_PrefabInstance: {fileID: 7814593088503907803}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1267521486
 GameObject:
   m_ObjectHideFlags: 0
@@ -2472,14 +2483,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 8234851942873808479, guid: 39633269f4d4ea24ea41f5dd07d1cb7c, type: 3}
+      propertyPath: myPlay
+      value: 
+      objectReference: {fileID: 1457141276}
+    - target: {fileID: 8234851942873808479, guid: 39633269f4d4ea24ea41f5dd07d1cb7c, type: 3}
+      propertyPath: Player
+      value: 
+      objectReference: {fileID: 1184272588}
     - target: {fileID: 8234851943544102514, guid: 39633269f4d4ea24ea41f5dd07d1cb7c, type: 3}
       propertyPath: jumpH
       value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8234851943544102514, guid: 39633269f4d4ea24ea41f5dd07d1cb7c, type: 3}
       propertyPath: airSpeed
-      value: 1.8
+      value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 8234851943544102514, guid: 39633269f4d4ea24ea41f5dd07d1cb7c, type: 3}
+      propertyPath: Camera
+      value: 
+      objectReference: {fileID: 519420028}
     - target: {fileID: 8234851943544102515, guid: 39633269f4d4ea24ea41f5dd07d1cb7c, type: 3}
       propertyPath: m_LocalPosition.x
       value: -10.34
@@ -2539,8 +2562,3 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 7814593089412379642, guid: 39633269f4d4ea24ea41f5dd07d1cb7c, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 39633269f4d4ea24ea41f5dd07d1cb7c, type: 3}
---- !u!1 &7814593088503907804 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8234851943544102517, guid: 39633269f4d4ea24ea41f5dd07d1cb7c, type: 3}
-  m_PrefabInstance: {fileID: 7814593088503907803}
-  m_PrefabAsset: {fileID: 0}

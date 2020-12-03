@@ -20,7 +20,8 @@ public class Movement2D : MonoBehaviour
     private object other;
 	public GameObject Gate;
 	public GameObject Button;
-
+	
+	
     // Start is called before the first frame update
     void Start()
     {
@@ -54,6 +55,9 @@ public class Movement2D : MonoBehaviour
 			vel.y = 0.0f;
 			rb.velocity = vel;
 			rb.AddForce(new Vector2(0f, jumpH), ForceMode2D.Impulse);
+			
+			// give the camera has jumped variable the status of true
+			
 		}
 	}
 	void move() // move method decides how the player moves

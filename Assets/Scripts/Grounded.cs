@@ -10,6 +10,8 @@ public class Grounded : MonoBehaviour
 	public GameObject Player;
 	public Transform myPlay;
 	public float lastGrounded;
+	public GameObject Camera;
+	public Transform myCam;
     // Start is called before the first frame update
     void Start()
     {
@@ -31,12 +33,19 @@ public class Grounded : MonoBehaviour
 		{
 			//lastGrounded = myPlay.position.y; //this is an attempt to reset the last grounded when the player lands
 			Player.GetComponent<Movement2D>().airDirection = false;
+			float cameraOnEnter;
+			cameraOnEnter = myPlay.position.y;
+			Camera.GetComponent<FollowPlayer>().camOnEnter = cameraOnEnter;
 		}
 	}
 	private void OnCollisionExit2D(Collision2D collision)
 	{
 		if (collision.collider.tag == "Ground")
 		{
+			float cameraOnExit;
+			cameraOnExit = myCam.position.y;
+			Camera.GetComponent<FollowPlayer>().hasJumped = true;
+			Camera.GetComponent<FollowPlayer>().camOnExit = cameraOnExit;
 			//lastGrounded = myPlay.position.y;
 			Player.GetComponent<Movement2D>().isGrounded = false;
 			Player.GetComponent<Movement2D>().airDirection = Player.GetComponent<Movement2D>().directionx;
