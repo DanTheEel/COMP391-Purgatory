@@ -12,7 +12,7 @@ public class Movement2D : MonoBehaviour
 	public bool airDirection;
 	public bool airChange = false;
 	public bool isGrounded = false;
-	SpriteRenderer mySpriteRenderer;
+	public SpriteRenderer mySpriteRenderer;
 	public bool directionx = false;
 	public KeyCode moveLeft = KeyCode.LeftArrow;
 	public KeyCode moveRight = KeyCode.RightArrow;
@@ -37,9 +37,9 @@ public class Movement2D : MonoBehaviour
 			Jump(); // jumping
 			move(); // movement
 			direction(); // which way the character is facing
-			directionAnimator(); // which direction the animator is facing
+			//directionAnimator(); // which direction the animator is facing
 		}
-		stopMotion(); // stopping the animator 
+		//stopMotion(); // stopping the animator 
 
 		// Added a line of code to inscrease the dead count when the player dies
 		if (this.gameObject.transform.position.y < -31)
