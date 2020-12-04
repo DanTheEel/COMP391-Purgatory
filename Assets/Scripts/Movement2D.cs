@@ -37,9 +37,9 @@ public class Movement2D : MonoBehaviour
 			Jump(); // jumping
 			move(); // movement
 			direction(); // which way the character is facing
-			directionAnimator(); // which direction the animator is facing
+			//directionAnimator(); // which direction the animator is facing
 		}
-		stopMotion(); // stopping the animator 
+		//stopMotion(); // stopping the animator 
 
 		// Added a line of code to inscrease the dead count when the player dies
 		if (this.gameObject.transform.position.y < -31)
