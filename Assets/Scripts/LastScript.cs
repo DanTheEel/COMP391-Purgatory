@@ -29,7 +29,7 @@ public class LastScript : MonoBehaviour
 
             Instantiate(congratulationParchment, new Vector3(x, y, z), Quaternion.identity);
         }
-        else
+        else if (other.gameObject.tag == "Player" && ParchmentCount.parchmentCount <5)
         {
             float x1, y1, z1;
             x1 = 123.88f;

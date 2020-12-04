@@ -16,6 +16,9 @@ TagManager:
   - Story1
   - Gate
   - Respawn2
+  - Respawn3
+  - Death
+  - Box
   layers:
   - Default
   - TransparentFX
@@ -50,6 +53,9 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Sky
+    uniqueID: 2030937567
+    locked: 0
   - name: Background
     uniqueID: 849911753
     locked: 0

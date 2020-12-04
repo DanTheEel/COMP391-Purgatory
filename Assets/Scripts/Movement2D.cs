@@ -111,10 +111,12 @@ public class Movement2D : MonoBehaviour
 		if (rb.velocity==new Vector2(0,0))	//if character isn't moving then animator doesn't play and character stops moving
 		{
 			GetComponent<Animator>().enabled = false;
+			GetComponent<AudioSource>().enabled = false; // Audiosource not playing when movement stops
 		}
         else // otherwise play animator
         {
 			GetComponent<Animator>().enabled = true;
+			GetComponent<AudioSource>().enabled = true; // Audiosource is playing when there is movement
 		}
 	}
 	void directionAnimator()

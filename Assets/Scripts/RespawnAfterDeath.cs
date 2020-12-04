@@ -17,7 +17,7 @@ public class RespawnAfterDeath : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
-            respawn(GameObject.FindGameObjectWithTag("Player"), GameObject.FindGameObjectWithTag("Respawn"));
+            respawn(GameObject.FindGameObjectWithTag("Player"), GameObject.FindGameObjectWithTag("Respawn")); 
         }
     }
 }
