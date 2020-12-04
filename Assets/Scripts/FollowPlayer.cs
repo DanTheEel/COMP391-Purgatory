@@ -20,7 +20,7 @@ public class FollowPlayer : MonoBehaviour
 	public float camOnEnter;
 	public float newX, newY ,newZ; //this will be our x position that we will be manipulating to stay at the same X as the player while not being at the same y
 	public bool endGame = false;
-	//private int tracker = 0;
+	public GameObject CameraResize;
     // Update is called once per frame
     public void Update()
     {
@@ -28,7 +28,7 @@ public class FollowPlayer : MonoBehaviour
 		{
 			lastGroundedPos = grounded.GetComponent<Grounded>().lastGrounded;
 		
-				newY = myPlay.position.y; //current player position
+			newY = myPlay.position.y; //current player position
 			if(newY <= lastGroundedPos - 3.0f)
 			{
 				transform.position = myPlay.position + myPos; // this takes the player position and adds -50 to the z and adds 0 to the y and x
@@ -51,6 +51,27 @@ public class FollowPlayer : MonoBehaviour
 				newZ = myPos.z;
 				transform.position = new Vector3(newX,lastGroundedPos,newZ);
 			}
+		}
+		else if (endGame == true)
+		{
+			float y = transform.position.y;
+			float x = transform.position.x;
+			Player.GetComponent<Movement2D>().movementEnabled = false;
+			if (x < 155.0f)
+			{
+				x = x +0.01f;
+			}
+			float camsize = CameraResize.GetComponent<Camera>().orthographicSize;
+			if (camsize < 9.0f)
+			{
+				camsize = camsize * 1.0003f;
+				CameraResize.GetComponent<Camera>().orthographicSize = camsize;
+			}
+			if (y > -33.0f)
+			{
+				y = y - 0.01f;
+			}
+			transform.position = new Vector3(x,y,-10.0f);
 		}
 	}
 }

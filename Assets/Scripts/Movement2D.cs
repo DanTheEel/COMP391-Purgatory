@@ -12,7 +12,7 @@ public class Movement2D : MonoBehaviour
 	public bool airDirection;
 	public bool airChange = false;
 	public bool isGrounded = false;
-	SpriteRenderer mySpriteRenderer;
+	public SpriteRenderer mySpriteRenderer;
 	public bool directionx = false;
 	public KeyCode moveLeft = KeyCode.LeftArrow;
 	public KeyCode moveRight = KeyCode.RightArrow;
@@ -20,7 +20,7 @@ public class Movement2D : MonoBehaviour
     private object other;
 	public GameObject Gate;
 	public GameObject Button;
-	
+	public bool endGame = false;
 	
     // Start is called before the first frame update
     void Start()
@@ -110,13 +110,19 @@ public class Movement2D : MonoBehaviour
 	{
 		if (rb.velocity==new Vector2(0,0))	//if character isn't moving then animator doesn't play and character stops moving
 		{
-			GetComponent<Animator>().enabled = false;
-			GetComponent<AudioSource>().enabled = false; // Audiosource not playing when movement stops
+			if (endGame == false)
+			{
+				GetComponent<Animator>().enabled = false;
+				GetComponent<AudioSource>().enabled = false; // Audiosource not playing when movement stops
+			}
 		}
         else // otherwise play animator
         {
-			GetComponent<Animator>().enabled = true;
-			GetComponent<AudioSource>().enabled = true; // Audiosource is playing when there is movement
+			if (endGame == false)
+			{
+				GetComponent<Animator>().enabled = true;
+				GetComponent<AudioSource>().enabled = true; // Audiosource is playing when there is movement
+			}
 		}
 	}
 	void directionAnimator()
