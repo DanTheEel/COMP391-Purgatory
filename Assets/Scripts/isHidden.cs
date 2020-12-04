@@ -33,6 +33,10 @@ public class isHidden : MonoBehaviour
     }
     private void OnTriggerStay2D(Collider2D other)
     {
+        if (other.gameObject.CompareTag("Bush"))
+        {
+            Hidden = true;
+        }
         if (other.gameObject.CompareTag("Vision") && Hidden == false)
         {
             RespawnAfterDeath.respawn(this.gameObject, Checkpoint);

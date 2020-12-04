@@ -16,6 +16,8 @@ TagManager:
   - Story1
   - Gate
   - Respawn2
+  - Respawn3
+  - Death
   layers:
   - Default
   - TransparentFX

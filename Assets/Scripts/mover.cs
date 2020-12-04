@@ -26,7 +26,7 @@ public class mover : MonoBehaviour
        rb.velocity = new Vector2(speed, 0.0f);
         // Previously, it was : if(this.transform.position.x<-20),
         // Changed it to -60 to accomodate the one level scene
-        if (this.transform.position.x < -120)
+        if (this.transform.position.x < -60)
         {            
             Destroy(this.gameObject);
         }
