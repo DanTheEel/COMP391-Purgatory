@@ -12,7 +12,7 @@ public class Movement2D : MonoBehaviour
 	public bool airDirection;
 	public bool airChange = false;
 	public bool isGrounded = false;
-	public SpriteRenderer mySpriteRenderer;
+	SpriteRenderer mySpriteRenderer;
 	public bool directionx = false;
 	public KeyCode moveLeft = KeyCode.LeftArrow;
 	public KeyCode moveRight = KeyCode.RightArrow;
@@ -21,9 +21,9 @@ public class Movement2D : MonoBehaviour
 	public GameObject Gate;
 	public GameObject Button;
 	public bool endGame = false;
-	
-    // Start is called before the first frame update
-    void Start()
+
+	// Start is called before the first frame update
+	void Start()
     {
 		mySpriteRenderer = GetComponent<SpriteRenderer>(); // instance of sprite renderer the visual
 		rb = GetComponent<Rigidbody2D>(); // instance of the rigid body to control the character
@@ -37,9 +37,9 @@ public class Movement2D : MonoBehaviour
 			Jump(); // jumping
 			move(); // movement
 			direction(); // which way the character is facing
-			//directionAnimator(); // which direction the animator is facing
+			directionAnimator(); // which direction the animator is facing
 		}
-		//stopMotion(); // stopping the animator 
+		stopMotion(); // stopping the animator 
 
 		// Added a line of code to inscrease the dead count when the player dies
 		if (this.gameObject.transform.position.y < -31)

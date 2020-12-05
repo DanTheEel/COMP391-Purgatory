@@ -7,7 +7,7 @@ public class DeadCount : MonoBehaviour
 {
     public static int deadCount = 0;
     Text death;
-	public bool endGame = false;
+    public bool endGame = false; // 
     // Start is called before the first frame update
     void Start()
     {
@@ -17,9 +17,9 @@ public class DeadCount : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-		if (endGame == false)
-		{
-			death.text = "Death Count: " + deadCount;
-		}
-	}
+        if (endGame == false)//
+        {
+            death.text = "Death Count: " + deadCount;
+        }
+    }
 }
